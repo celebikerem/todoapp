@@ -1,0 +1,45 @@
+<ion-header text-center>
+  <ion-navbar>
+    <ion-title>
+      To Do App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid text-center>
+
+    <ion-row>
+      <ion-col>
+        <ion-input (ngModel)="tdlName" placeholder="Add To Do" style="background-color: lightblue"></ion-input>
+        <button ion-button (click)="addToDoLists()">Add</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-list *ngFor="let todo of todos">
+          <ion-item-sliding>
+            <ion-item>
+              <h2>{{todo.tdlName}}</h2>
+            </ion-item>-
+            <ion-item-options side="right">
+              <button ion-button color="primary">
+                Complete
+              </button>
+              <button ion-button color="secondary">
+                Edit
+              </button>
+              <button ion-button color="danger">
+                Delete
+              </button>
+            </ion-item-options>
+          </ion-item-sliding>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
