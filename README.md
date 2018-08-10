@@ -13,3 +13,5 @@
 - Open project on favorite editor
 - Go to project folder and use "ionic serve" on command shell
 - App is running on localhost:8100
+
+Note: CORS should be disabled
